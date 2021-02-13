@@ -28,7 +28,7 @@
                 jsonData = JSON.parse(resultRequest.response)
                 if (jsonData && jsonData["icestats"] && jsonData["icestats"]["source"]) {
                     const sources = jsonData["icestats"]["source"]
-                    description = Array.isArray(sources) ? sources[0].server_description : sources.server_description
+                    description = Array.isArray(sources) ? sources[0].server_name : sources.server_name
                 }
             }
             document.getElementById("description").innerHTML = description;
