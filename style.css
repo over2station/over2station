@@ -1,0 +1,23 @@
+body {
+    background-color: #ffc4a3;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+    background-color:#000000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    margin: 10px;
+}
+
+.wrapper {
+    position: relative;
+}
