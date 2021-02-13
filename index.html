@@ -1,79 +1,89 @@
-<script>
-    const STATUS_URL = "https://over2station.shyndard.eu/status-json.xsl";
-    const DEFAULT_DESCRIPTION = "Aucune émission en cours";
+<!DOCTYPE html>
+<html>
 
-    function get(url) {
-        const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP")
+<head>
+    <script>
+        const STATUS_URL = "https://over2station.shyndard.eu/status-json.xsl";
+        const DEFAULT_DESCRIPTION = "Aucune émission en cours";
 
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                return xmlhttp.responseText;
+        function get(url) {
+            const xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP")
+
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    return xmlhttp.responseText;
+                }
             }
+            xmlhttp.open("GET", url, false);
+            xmlhttp.send();
+
+            return xmlhttp;
         }
-        xmlhttp.open("GET", url, false);
-        xmlhttp.send();
 
-        return xmlhttp;
-    }
+        function updateDescription() {
+            const resultRequest = get(STATUS_URL)
+            let description = DEFAULT_DESCRIPTION
 
-    function updateDescription() {
-        const resultRequest = get(STATUS_URL)
-        let description = DEFAULT_DESCRIPTION
-
-        if (resultRequest.status == 200 && resultRequest.response) {
-            jsonData = JSON.parse(resultRequest.response)
-            if (jsonData && jsonData["icestats"] && jsonData["icestats"]["source"]) {
-                const sources = jsonData["icestats"]["source"]
-                description = Array.isArray(sources) ? sources[0].server_description : sources.server_description
+            if (resultRequest.status == 200 && resultRequest.response) {
+                jsonData = JSON.parse(resultRequest.response)
+                if (jsonData && jsonData["icestats"] && jsonData["icestats"]["source"]) {
+                    const sources = jsonData["icestats"]["source"]
+                    description = Array.isArray(sources) ? sources[0].server_description : sources.server_description
+                }
             }
+            document.getElementById("description").innerHTML = description;
         }
-        document.getElementById("description").innerHTML = description;
-    }
 
-    window.setInterval(function () {
-        updateDescription()
-    }, 60000);
+        window.setInterval(function () {
+            updateDescription()
+        }, 60000);
 
 
-    window.onload = function () {
-        updateDescription()
-    };
+        window.onload = function () {
+            updateDescription()
+        };
 
-</script>
-<style>
-    body {
-        background-color: #ffc4a3;
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-        font-family: 'Merriweather Sans', sans-serif;
-        color: white;
-    }
+    </script>
+    <style>
+        body {
+            background-color: #ffc4a3;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            font-family: 'Merriweather Sans', sans-serif;
+            color: white;
+        }
 
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-</style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
 
 <body style="background-color:#000000;">
-    <script type="text/javascript" src="mrp.js"></script>
-    <script type="text/javascript">
-        MRP.insert({
-            'url': 'https://over2station.shyndard.eu/live.mp3',
-            'codec': 'mp3',
-            'volume': 100,
-            'autoplay': true,
-            'jsevents': true,
-            'buffering': 0,
-            'title': 'Over2Station',
-            'wmode': 'transparent',
-            'skin': 'mcclean',
-            'width': 180,
-            'height': 60
-        });
-    </script>
-    <br/><br/>
-    <h2 id="description"></h2>
+    <div>
+        <h2 id="description"></h2>
+    </div>
+    <div>
+        <script type="text/javascript" src="mrp.js"></script>
+        <script type="text/javascript">
+            MRP.insert({
+                'url': 'https://over2station.shyndard.eu/live.mp3',
+                'codec': 'mp3',
+                'volume': 100,
+                'autoplay': true,
+                'jsevents': true,
+                'buffering': 0,
+                'title': 'Over2Station',
+                'wmode': 'transparent',
+                'skin': 'mcclean',
+                'width': 180,
+                'height': 60
+            });
+        </script>
+    </div>
 </body>
+
+</html>
