@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Over2Station</title>
     <script>
         const STATUS_URL = "https://over2station.shyndard.eu/status-json.xsl";
         const DEFAULT_DESCRIPTION = "Aucune émission en cours";
@@ -31,7 +32,8 @@
                     description = Array.isArray(sources) ? sources[0].server_name : sources.server_name
                 }
             }
-            document.getElementById("description").innerHTML = description;
+            document.getElementById("description").textContent = description;
+            document.title = description + " - Over2Station";
         }
 
         window.setInterval(function () {
