@@ -59,31 +59,44 @@
             margin: 0;
             box-sizing: border-box;
         }
+
+        div {
+            margin: 10px;
+        }
+
+        .wrapper {
+            position: relative;
+        }
     </style>
 </head>
 
 <body style="background-color:#000000;">
-    <div>
-        <h2 id="description"></h2>
+
+
+    <div class="wrapper">
+        <div>
+            <h2 id="description"></h2>
+        </div>
+        <div>
+            <script type="text/javascript" src="mrp.js"></script>
+            <script type="text/javascript">
+                MRP.insert({
+                    'url': 'https://over2station.shyndard.eu/live.mp3',
+                    'codec': 'mp3',
+                    'volume': 100,
+                    'autoplay': true,
+                    'jsevents': true,
+                    'buffering': 0,
+                    'title': 'Over2Station',
+                    'wmode': 'transparent',
+                    'skin': 'mcclean',
+                    'width': 180,
+                    'height': 60
+                });
+            </script>
+        </div>
     </div>
-    <div>
-        <script type="text/javascript" src="mrp.js"></script>
-        <script type="text/javascript">
-            MRP.insert({
-                'url': 'https://over2station.shyndard.eu/live.mp3',
-                'codec': 'mp3',
-                'volume': 100,
-                'autoplay': true,
-                'jsevents': true,
-                'buffering': 0,
-                'title': 'Over2Station',
-                'wmode': 'transparent',
-                'skin': 'mcclean',
-                'width': 180,
-                'height': 60
-            });
-        </script>
-    </div>
+
 </body>
 
 </html>
