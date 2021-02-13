@@ -1,6 +1,6 @@
 body {
-    background-color: #ffc4a3;
     display: flex;
+    text-align: center;
     justify-content: center;
     margin-top: 50px;
     font-family: 'Merriweather Sans', sans-serif;
