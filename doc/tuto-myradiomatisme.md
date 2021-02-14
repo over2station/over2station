@@ -30,7 +30,7 @@ Pour configurer votre micro, lancez une musique dans votre playlist, cliquez sur
 
 ### 2.2 Ajustement du son
 
-Dans l'onglet "Options", cocher "Activer l'amplificateur dynamique (DAMP). Cela permettra d'ajuster les musiques pour avoir tout le temps un même niveau sonore (et ne pas péter les oreilles de vos écouteurs).
+Dans l'onglet "Options", cocher "Activer l'amplificateur dynamique (DAMP). Cela permettra d'ajuster les musiques pour avoir tout le temps un même niveau sonore (et ne pas péter les oreilles de vos écouteurs). Attention, cela peut réduire la qualité du son avec quelques saturation, option à activer si vous savez ce que vous faites.
 
 ### 2.3 Configurer une diffusion
 
@@ -56,4 +56,4 @@ Une fois configuré, cliquer sur le bouton "Lancer la diffusion" pour démarrer 
 
 ## 3. Notes
 
-Dans le cas où il n'y a plus de son (musique, voix), le stream se coupe automatiquement au bout de quelques secondes. Pensez à avoir une playlist important pour ne pas avoir de problèmes.
+Dans le cas où il n'y a plus de son (musique, voix), le stream se coupe automatiquement au bout de quelques secondes. Pensez à avoir une playlist importante pour ne pas avoir de problèmes.
