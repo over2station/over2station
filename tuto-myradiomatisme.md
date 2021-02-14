@@ -43,7 +43,7 @@ Cliquer sur "Diffusion sur internet", cliquer sur le boutton "+". Données :
 | Mot de passe | A demander =D |
 | Station publique | A décocher |
 | Fichier de montage | /live.mp3 |
-| Nom de la radio | Le nom de l'émission qui sera affiché sur le site web |
+| Nom de la radio | Le nom de l'émission qui sera affiché sur le site web (par exemple "Loup Garou", "Blindtest")|
 | Site web | https://over2craft.com |
 | Genre | Gaming |
 | Format | MP3 |
