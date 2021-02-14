@@ -17,7 +17,7 @@ Une fois lancé, MyRadiomatisme ressemble à ceci (sans les cadres de couleur):
 
 ## 2. Configuration
 
-### Microphone
+### 2.1 Microphone
 
 Pour configurer votre micro, rendez-vous dans le menu "Modules" en haut à gauche puis "Micro".
 Dans "Carte son à utiliser", sélectionner votre micro.
@@ -28,11 +28,11 @@ Pour configurer votre micro, lancez une musique dans votre playlist, cliquez sur
 
 > Pour activer votre micro, cliquer sur "Micro off" en bas à gauche de l'application. Cliquer sur "Micro on" pour éteindre le micro.
 
-### Ajustement du son
+### 2.2 Ajustement du son
 
 Dans l'onglet "Options", cocher "Activer l'amplificateur dynamique (DAMP). Cela permettra d'ajuster les musiques pour avoir tout le temps un même niveau sonore (et ne pas péter les oreilles de vos écouteurs).
 
-### Configurer une diffusion
+### 2.3 Configurer une diffusion
 
 Cliquer sur "Diffusion sur internet", cliquer sur le boutton "+". Données :
 | Nom | Valeur |
