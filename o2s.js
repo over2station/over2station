@@ -1,4 +1,4 @@
-const STATUS_URL = "https://over2station.shyndard.eu/status-json.xsl";
+const STATUS_URL = "https://o2s.shyndard.eu/status-json.xsl";
 const DEFAULT_DESCRIPTION = "Aucune émission en cours";
 
 function get(url) {
