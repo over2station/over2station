@@ -38,7 +38,7 @@ Cliquer sur "Diffusion sur internet", cliquer sur le boutton "+". Données :
 | Nom | Valeur |
 | :---: | :---: |
 | Type de serveur | Icecast |
-| Adresse | over2station.shyndard.net |
+| Adresse | o2s-stream.shyndard.eu |
 | Port | 80 |
 | Mot de passe | A demander =D |
 | Station publique | A décocher |
